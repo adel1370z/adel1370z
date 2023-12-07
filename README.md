@@ -1,10 +1,20 @@
-- 👋 Hi, I’m @adel1370z
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+import telebot
 
-<!---
-adel1370z/adel1370z is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# Replace 'YOUR_BOT_TOKEN' with your actual bot token
+bot_token = 'YOUR_BOT_TOKEN'
+
+# Create an instance of the bot
+bot = telebot.TeleBot 6421101585:AAEIxRqFiaO1wcf7MXbGSG_U9I1T0prKDno
+
+# Handle /start command
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, "Hello! I am your Tabchi bot.")
+
+# Handle echo messages
+@bot.message_handler(func=lambda message: True)
+def echo(message):
+    bot.reply_to(message, message.text)
+
+# Start the bot
+bot.polling()
