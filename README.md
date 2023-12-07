@@ -1,10 +1,10 @@
 import telebot
 
 # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-bot_token = 'YOUR_BOT_TOKEN'
+bot_token = 6421101585:AAEIxRqFiaO1wcf7MXbGSG_U9I1T0prKDno
 
 # Create an instance of the bot
-bot = telebot.TeleBot 6421101585:AAEIxRqFiaO1wcf7MXbGSG_U9I1T0prKDno
+bot = telebot.TeleBot(bot_token)
 
 # Handle /start command
 @bot.message_handler(commands=['start'])
