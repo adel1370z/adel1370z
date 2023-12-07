@@ -11,7 +11,7 @@ bot = telebot.TeleBot(bot_token)
 def start(message):
     bot.reply_to(message, "Hello! I am your Tabchi bot.")
 
-# Handle echo messages
+# Handle echo messages @bot.message_handler(func=
 @bot.message_handler(func=lambda message: True)
 def echo(message):
     bot.reply_to(message, message.text)
